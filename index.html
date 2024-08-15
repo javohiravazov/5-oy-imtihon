@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="main.css" />
+    <title>Замок</title>
+  </head>
+  <body>
+    <header class="header container">
+      <div class="logo"><img src="images/logo__header.svg" alt="" /></div>
+      <nav class="nav">
+        <a href="#">Главная</a>
+        <a href="#">Каталог</a>
+        <a href="#">Оптовая продажа</a>
+        <a href="#">О нас</a>
+      </nav>
+      <div class="contact-info">
+        <img src="images/phone-call 1.svg" alt="" />
+        <a href="tel:+78665588499">+7 (866) 55 88 499</a>
+        <img src="images/heart__logo.svg" alt="" />
+        <img src="images/Frame.png" alt="" />
+      </div>
+    </header>
+
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="#">Главная</a> / <a href="#">Каталог</a>
+      </div>
+      <div class="category-title">
+        Накладные электронные замки <span class="category-count">(9)</span>
+      </div>
+    </div>
+    <!-- button section -->
+    <div class="button__section container">
+      <button id="reset" class="reset__btn">Сбросить фильтры</button>
+      <div>
+        <select
+          name="Выберите популярность"
+          class="popular__btn"
+          id="popularityFilter"
+        ></select>
+      </div>
+    </div>
+    <!-- left section -->
+    <div class="card__section container">
+      <div class="left__main">
+        <h2 style="margin-left: 24px; padding-top: 24px">Фильтр</h2>
+        <br />
+        <div class="costs">
+          <h4 style="margin-left: 24px">Цена</h4>
+          <img src="images/Frame2.png" alt="" />
+        </div>
+        <div class="cost__input">
+          <input class="input1" type="text" />
+          <input class="input2" type="text" />
+        </div>
+        <img class="img" src="images/list.png" alt="" />
+      </div>
+      <!-- card product -->
+      <div class="cards" id="product-list"></div>
+    </div>
+
+    <div class="footer container">
+      <img src="images/СЕО.svg" alt="" />
+      <img src="images/contact.svg" alt="" />
+      <img src="images/footer.svg" alt="" />
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
