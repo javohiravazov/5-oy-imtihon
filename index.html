@@ -19,7 +19,8 @@
         <img src="images/phone-call 1.svg" alt="" />
         <a href="tel:+78665588499">+7 (866) 55 88 499</a>
         <img src="images/heart__logo.svg" alt="" />
-        <img src="images/Frame.png" alt="" />
+        <!-- korzinka rasmi -->
+        <img id="basket" class="basket__svg" src="images/Frame.png" alt="" />
       </div>
     </header>
 
@@ -60,12 +61,23 @@
       <!-- card product -->
       <div class="cards" id="product-list"></div>
     </div>
-
-    <div class="footer container">
-      <img src="images/СЕО.svg" alt="" />
-      <img src="images/contact.svg" alt="" />
-      <img src="images/footer.svg" alt="" />
+    <!-- modal -->
+    <div id="basketModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Корзина</h2>
+        <hr class="hr_modal" />
+        <div id="basket-items"></div>
+        <p>Итого: <span id="total-price">0</span></p>
+      </div>
     </div>
-    <script src="main.js"></script>
+
+    <!-- footer -->
+    <div class="footer container">
+      <img class="section__first" src="images/СЕО.svg" alt="" />
+      <img class="section__second" src="images/contact.svg" alt="" />
+      <img class="section__third" src="images/footer.svg" alt="" />
+    </div>
+    <script type="module" src="main.js"></script>
   </body>
 </html>
