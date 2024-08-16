@@ -6,21 +6,21 @@ export function renderProducts(products) {
     const productCard = document.createElement("div");
     productCard.className = "product-card";
     productCard.innerHTML = `
-            <img class="product-image" src="${product.image}" alt="${
+              <img class="product-image" src="${product.image}" alt="${
       product.name
     }">
-            <img class="x" src="images/x.png" alt="">
-            <img class="word" src="images/word.png" alt="">  
-            <img class="podarka" src="images/podarka.png" alt=""> 
-            <div class="rating">${"★".repeat(product.rating)}</div>
-            <div class="title">${product.name}</div>
-            <div class="price">${product.price}Р <span class="old-price">${
+              <img class="x" src="images/x.png" alt="">
+              <img class="word" src="images/word.png" alt="">  
+              <img class="podarka" src="images/podarka.png" alt=""> 
+              <div class="rating">${"★".repeat(product.rating)}</div>
+              <div class="title">${product.name}</div>
+              <div class="price">${product.price}Р <span class="old-price">${
       product.oldPrice
     }Р</span>
-    <img class="special-icon" src="images/Frame.png" alt=""></div>
-    <div class="categories">${product.categories}</div>
-           
-        `;
+      <img class="special-icon" src="images/Frame.png" alt=""></div>
+      <div class="categories">${product.categories}</div>
+             
+          `;
     productCard
       .querySelector(".product-image")
       .addEventListener("click", (evt) => {

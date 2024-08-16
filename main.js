@@ -3,117 +3,119 @@ const elInput2 = document.querySelector(".input2");
 const elResetFiltered = document.querySelector("#reset");
 const elCategories = document.querySelector("#popularityFilter");
 
-const products = [
-  {
-    id: 1,
-    name: "Вариантный замок Golden Soft для отеля",
-    price: "7000",
-    oldPrice: "8000",
-    rating: 5,
-    image: "images/image1.png",
-    available: true,
-    categories: ["Sport"],
-    description:
-      "Замок дверной электронный Golden Soft GS-200Z-5 имеет роскошный глянцевый блеск, четкие линии, красивые формы. Подходит для установки на деревянную/межкомнатную дверь. ",
-  },
-  {
-    id: 2,
-    name: "Дверной Замок Golden Soft для офиса",
-    price: "33000",
-    oldPrice: "39 000",
-    rating: 4,
-    image: "images/image2.png",
-    available: true,
-    categories: ["Sport", "IT"],
-    description:
-      "Замок дверной электронный Golden Soft GS-200Z-5 имеет роскошный глянцевый блеск, четкие линии, красивые формы. Подходит для установки на деревянную/межкомнатную дверь. ",
-  },
-  {
-    id: 3,
-    name: "Дверной Замок Golden Soft для офиса",
-    price: "9000",
-    oldPrice: "12 000",
-    rating: 4.5,
-    image: "images/image1.png",
-    available: true,
-    categories: ["Manager"],
-    description:
-      "Замок дверной электронный Golden Soft GS-200Z-5 имеет роскошный глянцевый блеск, четкие линии, красивые формы. Подходит для установки на деревянную/межкомнатную дверь. ",
-  },
-  {
-    id: 4,
-    name: "Вариантный замок Golden Soft для отеля",
-    price: "7000",
-    oldPrice: "8 000",
-    rating: 5,
-    image: "images/image1.png",
-    available: true,
-    categories: ["Sport", "IT"],
-    description:
-      "Замок дверной электронный Golden Soft GS-200Z-5 имеет роскошный глянцевый блеск, четкие линии, красивые формы. Подходит для установки на деревянную/межкомнатную дверь. ",
-  },
-  {
-    id: 5,
-    name: "Дверной Замок Golden Soft для офиса",
-    price: "33000",
-    oldPrice: "39 000",
-    rating: 4,
-    image: "images/image2.png",
-    available: true,
-    categories: ["Sport", "Manager"],
-    description:
-      "Замок дверной электронный Golden Soft GS-200Z-5 имеет роскошный глянцевый блеск, четкие линии, красивые формы. Подходит для установки на деревянную/межкомнатную дверь. ",
-  },
-  {
-    id: 6,
-    name: "Дверной Замок Golden Soft для офиса",
-    price: "9000",
-    oldPrice: "12 000",
-    rating: 4.5,
-    image: "images/image1.png",
-    available: true,
-    categories: ["Sport", "test"],
-    description:
-      "Замок дверной электронный Golden Soft GS-200Z-5 имеет роскошный глянцевый блеск, четкие линии, красивые формы. Подходит для установки на деревянную/межкомнатную дверь. ",
-  },
-  {
-    id: 7,
-    name: "Вариантный замок Golden Soft для отеля",
-    price: "7000",
-    oldPrice: "8 000",
-    rating: 5,
-    image: "images/image1.png",
-    available: true,
-    categories: ["Sport", "IT"],
-    description:
-      "Замок дверной электронный Golden Soft GS-200Z-5 имеет роскошный глянцевый блеск, четкие линии, красивые формы. Подходит для установки на деревянную/межкомнатную дверь. ",
-  },
-  {
-    id: 8,
-    name: "Дверной Замок Golden Soft для офиса",
-    price: "33000",
-    oldPrice: "39 000",
-    rating: 4,
-    image: "images/image2.png",
-    available: true,
-    categories: ["test", "music"],
-    description:
-      "Замок дверной электронный Golden Soft GS-200Z-5 имеет роскошный глянцевый блеск, четкие линии, красивые формы. Подходит для установки на деревянную/межкомнатную дверь. ",
-  },
-  {
-    id: 9,
-    name: "Дверной Замок Golden Soft для офиса",
-    price: "9000",
-    oldPrice: "12 000",
-    rating: 4.5,
-    image: "images/image1.png",
-    available: true,
-    categories: ["music", "IT"],
-    description:
-      "Замок дверной электронный Golden Soft GS-200Z-5 имеет роскошный глянцевый блеск, четкие линии, красивые формы. Подходит для установки на деревянную/межкомнатную дверь. ",
-  },
-];
-localStorage.setItem("products", JSON.stringify(products));
+const products = localStorage.getItem("products")
+  ? JSON.parse(localStorage.getItem("products"))
+  : [
+      {
+        id: 1,
+        name: "Вариантный замок Golden Soft для отеля",
+        price: "7000",
+        oldPrice: "8000",
+        rating: 5,
+        image: "images/image1.png",
+        available: true,
+        categories: ["Sport"],
+        description:
+          "Замок дверной электронный Golden Soft GS-200Z-5 имеет роскошный глянцевый блеск, четкие линии, красивые формы. Подходит для установки на деревянную/межкомнатную дверь. ",
+      },
+      {
+        id: 2,
+        name: "Дверной Замок Golden Soft для офиса",
+        price: "33000",
+        oldPrice: "39 000",
+        rating: 4,
+        image: "images/image2.png",
+        available: true,
+        categories: ["Sport", "IT"],
+        description:
+          "Замок дверной электронный Golden Soft GS-200Z-5 имеет роскошный глянцевый блеск, четкие линии, красивые формы. Подходит для установки на деревянную/межкомнатную дверь. ",
+      },
+      {
+        id: 3,
+        name: "Дверной Замок Golden Soft для офиса",
+        price: "9000",
+        oldPrice: "12 000",
+        rating: 4.5,
+        image: "images/image1.png",
+        available: true,
+        categories: ["Manager"],
+        description:
+          "Замок дверной электронный Golden Soft GS-200Z-5 имеет роскошный глянцевый блеск, четкие линии, красивые формы. Подходит для установки на деревянную/межкомнатную дверь. ",
+      },
+      {
+        id: 4,
+        name: "Вариантный замок Golden Soft для отеля",
+        price: "7000",
+        oldPrice: "8 000",
+        rating: 5,
+        image: "images/image1.png",
+        available: true,
+        categories: ["Sport", "IT"],
+        description:
+          "Замок дверной электронный Golden Soft GS-200Z-5 имеет роскошный глянцевый блеск, четкие линии, красивые формы. Подходит для установки на деревянную/межкомнатную дверь. ",
+      },
+      {
+        id: 5,
+        name: "Дверной Замок Golden Soft для офиса",
+        price: "33000",
+        oldPrice: "39 000",
+        rating: 4,
+        image: "images/image2.png",
+        available: true,
+        categories: ["Sport", "Manager"],
+        description:
+          "Замок дверной электронный Golden Soft GS-200Z-5 имеет роскошный глянцевый блеск, четкие линии, красивые формы. Подходит для установки на деревянную/межкомнатную дверь. ",
+      },
+      {
+        id: 6,
+        name: "Дверной Замок Golden Soft для офиса",
+        price: "9000",
+        oldPrice: "12 000",
+        rating: 4.5,
+        image: "images/image1.png",
+        available: true,
+        categories: ["Sport", "test"],
+        description:
+          "Замок дверной электронный Golden Soft GS-200Z-5 имеет роскошный глянцевый блеск, четкие линии, красивые формы. Подходит для установки на деревянную/межкомнатную дверь. ",
+      },
+      {
+        id: 7,
+        name: "Вариантный замок Golden Soft для отеля",
+        price: "7000",
+        oldPrice: "8 000",
+        rating: 5,
+        image: "images/image1.png",
+        available: true,
+        categories: ["Sport", "IT"],
+        description:
+          "Замок дверной электронный Golden Soft GS-200Z-5 имеет роскошный глянцевый блеск, четкие линии, красивые формы. Подходит для установки на деревянную/межкомнатную дверь. ",
+      },
+      {
+        id: 8,
+        name: "Дверной Замок Golden Soft для офиса",
+        price: "33000",
+        oldPrice: "39 000",
+        rating: 4,
+        image: "images/image2.png",
+        available: true,
+        categories: ["test", "music"],
+        description:
+          "Замок дверной электронный Golden Soft GS-200Z-5 имеет роскошный глянцевый блеск, четкие линии, красивые формы. Подходит для установки на деревянную/межкомнатную дверь. ",
+      },
+      {
+        id: 9,
+        name: "Дверной Замок Golden Soft для офиса",
+        price: "9000",
+        oldPrice: "12 000",
+        rating: 4.5,
+        image: "images/image1.png",
+        available: true,
+        categories: ["music", "IT"],
+        description:
+          "Замок дверной электронный Golden Soft GS-200Z-5 имеет роскошный глянцевый блеск, четкие линии, красивые формы. Подходит для установки на деревянную/межкомнатную дверь. ",
+      },
+    ];
+// localStorage.setItem("products", JSON.stringify(products));
 
 function renderProducts(products) {
   const productList = document.getElementById("product-list");
@@ -146,6 +148,7 @@ function renderProducts(products) {
         localStorage.setItem("selectedProductId", productId);
         window.location.href = "product-details.html";
       }
+      localStorage.setItem("products", JSON.stringify(products));
     }
     if (evt.target.classList.contains("special-icon")) {
       const productId = evt.target
@@ -230,6 +233,7 @@ function updateBasketModal() {
       <div class="basket-item-price">${item.price}₽</div>
       <a href="#" class="remove-item" data-index="${index}"><img src="images/Удалить.svg" alt="Удалить"></a>
     `;
+
     basketItemsContainer.appendChild(basketItem);
     totalPrice += parseInt(item.price.replace(/\D/g, ""), 10);
   });
